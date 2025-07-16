@@ -79,12 +79,12 @@
 		</form>
     </section>
 	<script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/service-worker.js')
-        .then(registration => console.log('SW registered:', registration))
-        .catch(error => console.log('SW registration failed:', error));
-    });
+	if ('serviceWorker' in navigator) {
+    navigator.service-worker.register('./sw.js')
+		.then(() => navigator.service-worker.ready.then((worker) => {
+		worker.sync.register('syncdata');
+		}))
+        .catch((err) => console.log(err));
   }
 </script>
 </body>
