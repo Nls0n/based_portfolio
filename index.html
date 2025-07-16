@@ -80,7 +80,7 @@
     </section>
 	<script>
 	if ('serviceWorker' in navigator) {
-    navigator.service-worker.register('./sw.js')
+    navigator.service-worker.register('/sw.js')
 		.then(() => navigator.service-worker.ready.then((worker) => {
 		worker.sync.register('syncdata');
 		}))
