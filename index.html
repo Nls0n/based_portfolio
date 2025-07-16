@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Arseny Pluzhnikov - CV</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Arseny Pluzhnikov</h1>
+    </header>
+    
+    <section class="short-info">
+        <h3>Python backend & AI developer</h3>
+        <h6>
+            Date of birth: October 15th, 2006<br>
+            Age: 18<br>
+            Location: Moscow<br>
+            Current status: Not married, has no children<br>
+            Employment: Partial/Full employment<br>
+            Ready to work for 20/30/40 hours per week<br>
+            Not ready for business trips and relocations
+        </h6>
+    </section>
+    
+    <section class="experience-study">
+        <h4>Education & Experience</h4>
+        <h6>
+            Education: National University of Oil and Gas (Computer Science)<br>
+            Commercial experience: Python AI developer at Sber since 2025 until now<br>
+            Team: Real estate and exploitation<br>
+            Main tasks:<br>
+            - Developing complex and smart systems and services using LLMs (e.g. agents, workflows etc.)<br>
+            - Integrated AI models into corporate workflows and reduced expenses by more than 30%
+        </h6>
+    </section>
+    
+    <section class="skills">
+        <h5>Skills and Tools</h5>
+        <h6>
+			Active:<br>
+            Python, FastAPI, Git, Jira, LangChain, LangGraph, PostgreSQL, SQLAlchemy,<br>
+            Docker, Pytest, Gitlab, Redis, Pinecone, Apache Kafka, Pandas, Numpy, Matplotlib<br>
+			Passive:<br>
+			Django, C++, golang, matlab, VBA, QT, PyQt, Flask, C#, Kivy
+        </h6>
+    </section>
+    
+    <section class="contacts">
+		<h4>Contacts</h4>
+        <img src="images/contacts.png" class="profile-image">
+        <h6>
+            Telegram: @nlson — preferred communication method<br>
+            e-mail: nelson.plarm@gmail.com<br>
+            GitHub: github.com/Nls0n
+        </h6>
+    </section>
+	
+	<section class="portfolio">
+		<a href="portfolio.html">portfolio & projects</a>
+	</section>	
+	<section class="contact-form">
+		<h4>Contact Me</h4>
+		<form id="contactForm" method="post">
+			<div class="form-group">
+				<label for="name">Your Name:</label>
+				<input type="text" id="name" name="name" required>
+			</div>
+			<div class="form-group">
+				<label for="email">Your Email:</label>
+				<input type="email" id="email" name="email" required>
+			</div>
+			<div class="form-group">
+				<label for="message">Message:</label>
+				<textarea id="message" name="message" required></textarea>
+			</div>
+			<button type="submit" class="submit-btn">Send Message</button>
+		</form>
+    </section>
+	<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(registration => console.log('SW registered:', registration))
+        .catch(error => console.log('SW registration failed:', error));
+    });
+  }
+</script>
+</body>
+</html>
